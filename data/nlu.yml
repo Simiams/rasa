@@ -1,0 +1,130 @@
+version: "3.1"
+
+nlu:
+  - intent: goodbye
+    examples: |
+      - Au revoir
+      - Bye
+      - A plus tard
+      - A bientôt
+      - A la prochaine
+      - Merci, au revoir
+      - Merci, à bientôt
+      - Merci, à la prochaine
+
+
+  - intent: greet
+    examples: |
+      - Bonjour
+      - Salut
+      - yo
+
+  - intent: see_daily_menu
+    examples: |
+      - Quel est le menu du jour ?
+      - Que me proposes-tu aujourd'hui ?
+      - Qu'est-ce qu'il y a au menu ?
+      - Je veux voir le menu du jour
+      - Montre-moi le menu du jour
+      - Quel est le plat du jour ?
+      - Qu'est-ce qu'on mange aujourd'hui ?
+
+  - intent: see_dish_menu
+    examples: |
+      - Voir la carte et allergènes
+      - Montre-moi la carte
+      - Je veux voir la carte
+      - Montre-moi le menu
+      - Je veux voir le menu
+      - Quel est le plat ?
+      - Quels sont les plats ?
+      - Montre moi les allergènes
+
+  - intent: want_cancel_booking
+    examples: |
+      - Je veux annuler ma réservation
+      - Annuler ma réservation
+      - Je veux annuler ma commande
+      - Annuler ma commande
+
+  - intent: provide_booking_number
+    examples: |
+      - mon code [BLABLA](booking_number)
+      - voici mon numéro : [BLUEBL](booking_number)
+      - j’ai réservé avec le code [AZICEE](booking_number)
+      - le code est [HDJEBZ](booking_number)
+      - le code est [ZQTHCS](booking_number)
+      - le code est [ZQTHCF](booking_number)
+      - le code est [ZQTHBZ](booking_number)
+      - le numéro [PMDUBX](booking_number)
+
+  - intent: want_book_table
+    examples: |
+      - Je veux une table
+      - Une table
+      - Je veux faire une réservation
+      - Je souhaite une table
+      - Pour moi, une table
+
+  - intent: provide_time
+    examples: |
+      - Je veux réserver à 18h
+      - je veux réserver [demain soir](time)
+      - pour [ce soir](time)
+      - [lundi à midi](time)
+      - [25 décembre à 20h](time)
+      - une table [demain à 19h](time)
+      - réserver [le 1er mai à 12h30](time)
+      - je voudrais réserver [ce vendredi à 21h](time)
+      - pour [dimanche midi](time)
+      - [dans deux jours à 18h](time)
+      - une table [à 20h demain](time)
+      - [vendredi soir](time)
+      - [ce soir à 22h](time)
+      - [demain matin à 9h](time)
+      - réservation pour [jeudi à 13h15](time)
+      - est-ce que c’est libre [le 2 juin à 19h30](time)
+      - je cherche une dispo [samedi soir](time)
+      - [le 14 juillet à 20h](time)
+      - j’aimerais dîner [lundi prochain à 20h](time)
+
+  - intent: provide_number_of_people
+    examples: |
+      - nous serons [2](number_of_people)
+      - on est [3](number_of_people)
+      - j'ai besoin d'une table pour [4](number_of_people)
+      - une table pour [5](number_of_people) personnes
+      - on sera [6](number_of_people) ce soir
+      - pour [7](number_of_people) personnes au total
+      - [8](number_of_people) convives
+      - il y aura [9](number_of_people) personnes
+      - [10](number_of_people) invités
+      - pour [1](number_of_people) personne
+      - je suis [seul](number_of_people)
+      - je viens [seul](number_of_people)
+      - juste moi, [seul](number_of_people)
+      - on est un groupe de [12](number_of_people)
+      - [15](number_of_people), c'est possible ?
+      - on est [2](number_of_people), ça ira ?
+      - [3](number_of_people), c’est bon ?
+      - pour une tablée de [6](number_of_people)
+      - réservez pour [4](number_of_people) personnes
+
+  - intent: provide_phone
+    examples: |
+      - mon numéro est [0611223344](phone)
+      - c’est le [0644556677](phone)
+      - tu peux me joindre au [0677889900](phone)
+      - mon téléphone : [06 45 67 89 10](phone)
+      - téléphone [07 08 09 10 11](phone)
+      - voici mon numéro [06 98 76 54 32](phone)
+      - contact : [01 02 03 04 05](phone)
+      - numéro : [09 01 23 45 67](phone)
+
+  - intent: want_see_bookings
+    examples: |
+      - Je veux voir mes réservations
+      - Montre-moi mes réservations
+      - Je veux voir mes commandes
+      - Montre-moi mes commandes
+      - Affiche mes réservations

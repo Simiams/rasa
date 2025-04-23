@@ -1,0 +1,53 @@
+version: "3.1"
+
+stories:
+
+  - story: See daily menu
+    steps:
+      - intent: see_daily_menu
+      - action: action_show_daily_menu
+      - action: utter_ask_for_something_else
+
+  - story: See dish menu
+    steps:
+      - intent: see_dish_menu
+      - action: action_show_dish_menu
+      - action: utter_ask_for_something_else
+
+  - story: Cancel booking
+    steps:
+      - intent: want_cancel_booking
+      - action: utter_ask_booking_number
+      - intent: provide_booking_number
+        entities:
+          - booking_number: "filled"
+      - action: action_cancel_booking
+      - action: utter_ask_for_something_else
+
+  - story: Booking table
+    steps:
+      - intent: want_book_table
+      - action: utter_ask_for_time
+      - intent: provide_time
+        entities:
+          - time: "filled"
+      - action: utter_ask_for_number_of_people
+      - intent: provide_number_of_people
+        entities:
+          - number_of_people: "filled"
+      - action: utter_ask_for_phone
+      - intent: provide_phone
+        entities:
+          - phone: "filled"
+      - action: action_book_table
+      - action: utter_ask_for_something_else
+
+  - story: See bookings
+    steps:
+      - intent: want_see_bookings
+      - action: utter_ask_for_phone
+      - intent: provide_phone
+        entities:
+          - phone: "filled"
+      - action: action_get_bookings
+      - action: utter_ask_for_something_else

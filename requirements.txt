@@ -1,0 +1,6 @@
+discord.py==2.2.2
+python-dotenv==1.0.0
+rasa==3.6.21
+requests==2.32.0
+rasa==3.6.21
+sanic==21.12.1

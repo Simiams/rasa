@@ -1,0 +1,75 @@
+version: "3.1"
+
+slots:
+  time:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: time
+  number_of_people:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: number_of_people
+  phone:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: phone
+  booking_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: booking_number
+
+entities:
+  - time
+  - number_of_people
+  - phone
+  - booking_number
+
+intents:
+  - debug
+  - goodbye
+  - greet
+  - see_daily_menu
+  - see_dish_menu
+  - want_cancel_booking
+  - provide_booking_number
+  - want_book_table
+  - provide_time
+  - provide_number_of_people
+  - provide_phone
+  - want_see_bookings
+
+responses:
+  utter_goodbye:
+    - text: "Au revoir, à bientôt!"
+  utter_greet:
+    - text: "Salut, que puis-je faire pour toi?"
+  utter_show_actions:
+    - text: "\n- Réserver une table?\n- Voir le menu du jour?\n- Voir la carte et allergènes?\n- Voir mes réservations?\n- Annuler une réservation?"
+  utter_ask_booking_number:
+    - text: "Quel est ton numéros de réservation?"
+  utter_ask_for_time:
+    - text: "Pour quel jour?"
+  utter_ask_for_number_of_people:
+    - text: "Pour combien de personne?"
+  utter_confirm:
+    - text: "Date: {time}, Nombre de personnes: {number_of_people}. Est-ce correct?"
+  utter_ask_for_phone:
+    - text: "Quel est ton numéro de téléphone?"
+  utter_ask_for_something_else:
+    - text: "Y a-t-il autre chose que je peux faire pour toi?"
+
+actions:
+  - action_show_daily_menu
+  - action_show_dish_menu
+  - action_cancel_booking
+  - action_book_table
+  - action_get_bookings
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
