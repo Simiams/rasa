@@ -1,0 +1,26 @@
+# Environnements virtuels
+venv/
+.venv/
+
+# Fichiers temporaires Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dossiers Rasa
+.rasa/
+models/
+logs/
+
+# Cache et fichiers temporaires
+.cache/
+.dask/
+.pytest_cache/
+
+# Fichiers de configuration IDE
+.idea/
+.vscode/
+
+# Fichiers sensibles
+config/secrets.yml
