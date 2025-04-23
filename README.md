@@ -1,5 +1,7 @@
 ## CHATBOT
 
+Vous trouverez dans le dossier ./screen-recods les vidéos de démonstration du fonctionnement du bot sur discord.
+
 Pour lancer la base de donnée executez la commande suivante :
 
 ```bash
